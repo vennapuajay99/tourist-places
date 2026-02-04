@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Tourism Explorer</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body { font-family: 'Segoe UI', sans-serif; }
+
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff') center/cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+footer {
+  background: #111;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Explore The World</h1>
+    <p>Discover the most beautiful places on Earth</p>
+    <button class="btn btn-warning btn-lg mt-3" onclick="scrollToPlaces()">Start Exploring</button>
+  </div>
+</section>
+
+<!-- PLACES -->
+<section id="places" class="container my-5">
+  <h2 class="text-center mb-5">Top Tourist Destinations</h2>
+  <div class="row g-4">
+
+    <!-- 1 Maldives -->
+    <div class="col-md-4 d-flex">
+      <div class="card shadow flex-fill">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Maldives Beach">
+        <div class="card-body">
+          <h5>Maldives Beach</h5>
+          <p>Crystal clear waters and luxury water villas.</p>
+          <p><b>Location:</b> Indian Ocean</p>
+          <p><b>Speciality:</b> Coral Reefs & Resorts</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 3 Swiss Alps -->
+    <div class="col-md-4 d-flex">
+      <div class="card shadow flex-fill">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Swiss Alps">
+        <div class="card-body">
+          <h5>Swiss Alps</h5>
+          <p>Snow mountains with adventure sports.</p>
+          <p><b>Location:</b> Switzerland</p>
+          <p><b>Speciality:</b> Skiing</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 Grand Canyon -->
+    <div class="col-md-4 d-flex">
+      <div class="card shadow flex-fill">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429" alt="Grand Canyon">
+        <div class="card-body">
+          <h5>Grand Canyon</h5>
+          <p>Massive canyon carved by Colorado River.</p>
+          <p><b>Location:</b> Arizona, USA</p>
+          <p><b>Speciality:</b> Rock Formations</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 Great Wall -->
+    <div class="col-md-4 d-flex">
+      <div class="card shadow flex-fill">
+        <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d" alt="Great Wall of China">
+        <div class="card-body">
+          <h5>Great Wall of China</h5>
+          <p>Historic wonder stretching across mountains.</p>
+          <p><b>Location:</b> China</p>
+          <p><b>Speciality:</b> Ancient Architecture</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 Taj Mahal -->
+    <div class="col-md-4 d-flex">
+      <div class="card shadow flex-fill">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523" alt="Taj Mahal">
+        <div class="card-body">
+          <h5>Taj Mahal</h5>
+          <p>Symbol of love built with white marble.</p>
+          <p><b>Location:</b> Agra, India</p>
+          <p><b>Speciality:</b> Mughal Architecture</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7 Amazon Rainforest -->
+    <div class="col-md-4 d-flex">
+      <div class="card shadow flex-fill">
+        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9" alt="Amazon Rainforest">
+        <div class="card-body">
+          <h5>Amazon Rainforest</h5>
+          <p>Largest tropical rainforest with rich wildlife.</p>
+          <p><b>Location:</b> South America</p>
+          <p><b>Speciality:</b> Biodiversity</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8 Burj Khalifa -->
+    <div class="col-md-4 d-flex">
+      <div class="card shadow flex-fill">
+        <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090" alt="Burj Khalifa">
+        <div class="card-body">
+          <h5>Burj Khalifa</h5>
+          <p>Tallest building in the world with luxury view.</p>
+          <p><b>Location:</b> Dubai, UAE</p>
+          <p><b>Speciality:</b> Skyscraper View</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9 Santorini -->
+    <div class="col-md-4 d-flex">
+      <div class="card shadow flex-fill">
+        <img src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e" alt="Santorini Greece">
+        <div class="card-body">
+          <h5>Santorini</h5>
+          <p>Beautiful white-blue island with sunsets.</p>
+          <p><b>Location:</b> Greece</p>
+          <p><b>Speciality:</b> Cliffside Houses</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 Niagara Falls -->
+    <div class="col-md-4 d-flex">
+      <div class="card shadow flex-fill">
+        <img src="https://images.unsplash.com/photo-1501696461415-6bd6660c6742" alt="Niagara Falls">
+        <div class="card-body">
+          <h5>Niagara Falls</h5>
+          <p>Powerful waterfalls shared by USA & Canada.</p>
+          <p><b>Location:</b> North America</p>
+          <p><b>Speciality:</b> Massive Waterfall</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+World Tourism Explorer | Designed by Ajay
+</footer>
+
+<script>
+function scrollToPlaces() {
+  document.getElementById("places").scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>
